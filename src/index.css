@@ -1,0 +1,56 @@
+.job-info--box{
+    border-color: aqua;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+
+
+.job-info--description {
+    text-align: justify;
+    border-radius: 20px;
+}
+
+.form-style {
+    background-color: aquamarine;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
+
+.form-style--jobtitle {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.form-style--citytitle {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.hide-content {
+    display: none;
+    transition: display 2s ease-out;
+}
+
+
+.show-content {
+   display: block;
+}
+
+.footer {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
