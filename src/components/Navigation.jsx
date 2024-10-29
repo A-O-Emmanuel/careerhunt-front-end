@@ -50,9 +50,9 @@ useEffect( function () {
 
 
      return <>
-    
-        <form className="form-style" onSubmit={handleSubmit}> 
         <Header />
+        <form className="form-style" onSubmit={handleSubmit}> 
+       
             <div className="container text-center">
                 <div className="row">
                     <div className="col">
