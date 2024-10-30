@@ -1,5 +1,7 @@
 
-/*Header*/
+body {
+    background-color: #fff;
+}
 .nav {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -91,6 +93,8 @@
 
 }
 
+
+
 .job-info--box{
     border-color: aqua;
     margin-bottom: 50px;
@@ -119,10 +123,20 @@
    display: block;
 }
 
-.footer {
-    background-color: aliceblue;
-    padding-top: 100px;
-    padding-bottom: 100px;
+.footer__items {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #0F52BA;
+    padding-left: 30px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    gap: 10px;
+    list-style: none;
 }
 
+.copyright {
+    color:#fff;
+    align-self: center;
+}
 
