@@ -52,37 +52,27 @@ useEffect( function () {
 
      return <>
         <Header />
-        <form className="form-style" onSubmit={handleSubmit}> 
-       
-            <div className="container text-center">
-                <div className="row">
-                    <div className="col">
-                    
+        <div className="div form-container">
+            <form className="form-containter__form"  onSubmit={handleSubmit}> 
                         <input 
-                        className="form-style--jobtitle"
+                        className="form-container__jobtitle"
                         type="text" 
                         name="enterJOb"
                         ref={jobTitle}
                         placeholder="Search Job"
                         />
-
-                    </div>
-                    <div className="col">
                     
-                        <input 
-                        className="form-style--citytitle"
+                    <input 
+                        className="form-containter__location"
                         type="text"
                         name="enterCity"
                         ref={cityTitle}
                         placeholder="City"
                         />
-
-                        <button className="search-button">Search</button>   
-                    </div>
-
-            </div>
-            </div>
-        </form>
+                        <button className="form-container__search-button">Find jobs</button>   
+                       
+            </form>
+        </div>
 
         {isLoading && <Loader /> }
         {!isLoading && !error && search.map((jobs) => {
