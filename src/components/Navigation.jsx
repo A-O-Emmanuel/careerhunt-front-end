@@ -30,8 +30,6 @@ function handleSubmit(e) {
 }
 
 
-const app_id = "a784e5ca";
-const app_key = "c5a2831f7118b6e6893229fba355ab6f";
 
 useEffect( function () { 
     setIsLoading(true);

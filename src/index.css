@@ -1,3 +1,31 @@
+
+/*Header*/
+.nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.nav__item--jobs {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.nav__item--about {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.nav__item--signin {
+    margin-left: 40px;
+    font-size: 18px;
+
+}
+
+.nav__item--register {
+    margin-left: 40px;
+    font-size: 18px;
+}
 .job-info--box{
     border-color: aqua;
     margin-bottom: 50px;
