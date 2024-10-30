@@ -29,8 +29,6 @@ function handleSubmit(e) {
    e.preventDefault()
 }
 
-
-
 useEffect( function () { 
     setIsLoading(true);
     setError("")
@@ -72,6 +70,9 @@ useEffect( function () {
                         <button className="form-container__search-button">Find jobs</button>   
                        
             </form>
+            <div>
+
+            </div>
         </div>
 
         {isLoading && <Loader /> }

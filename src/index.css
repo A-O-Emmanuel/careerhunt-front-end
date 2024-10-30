@@ -30,7 +30,6 @@
     font-size: 18px;
 }
 
-
 .form-container{
     display: flex;
     justify-content: center;
@@ -47,6 +46,8 @@
 }
 
 .form-container__jobtitle {
+    background: url(./assets/work.svg) no-repeat scroll center left 10px;
+    padding-left: 45px;
    width: 400px;
    height: 60px;
    border-right: none;
@@ -62,6 +63,8 @@
 }
 
 .form-containter__location {
+    background: url(./assets/location.svg) no-repeat scroll center left 10px;
+    padding-left: 45px;
     width: 400px;
     height: 60px;;
     border-right: none;
