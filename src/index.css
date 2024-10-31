@@ -93,10 +93,99 @@ body {
 
 }
 
+.signin {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.signin__form {
+    padding: 40px;
+    background-color: #0F52BA;
+    border-radius: 10px;
+    color:#fff;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.signin__form--email {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
+.signin__form--password {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
+.signin__form--button {
+    float: right;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+
+
+.register {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.register__form {
+    padding: 40px;
+    background-color: #0F52BA;
+    border-radius: 10px;
+    color:#fff;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.register__form--email {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
+.register__form--password {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
+.register__form--confirm {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
+.register__form--button {
+    float: right;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+
+
+
 
 
 .job-info--box{
-    border-color: aqua;
+    border-color: #0F52BA;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;

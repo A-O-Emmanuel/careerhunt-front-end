@@ -8,23 +8,24 @@ function Register() {
     return (
         <>
         <Header />
-            <Form method='post' className="register_form">
-                <label htmlFor="email">Email</label>
+        <div className="register">
+            <Form method='post' className="register__form">
+                <label htmlFor="email" >Email</label>
                 <br />
-                <input type="email" name="email" required />
+                <input type="email" name="email" required className="register__form--email" />
                 <br />
                 <label htmlFor="password">Password</label>
                 <br />
-                <input type="password" name="password" required minLength={6} />
+                <input type="password" name="password" required minLength={6} className="register__form--password" />
                 <br />
                 <label htmlFor="confirm-password">Confirm</label>
                 <br />
-                <input type="password" name="confirm" required minLength={6} />
+                <input type="password" name="confirm" required minLength={6} className="register__form--confirm" />
                 <br />
-
                 <br />
-                <button>Register</button>
+                <button className="register__form--button">Register</button>
             </Form>
+        </div>
         <Footer />
         </>
     )
