@@ -190,9 +190,31 @@ body {
     text-align: justify;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    gap: 10px;
+}
 
+.pagination button {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+    color: #000;
+    border-color: #0F52BA;
+    box-shadow: 5px 5px 10px lightgray;
+}
 
-
+.pagination button.active {
+    background-color: #0F52BA;
+    color: #fff;
+}
 
 
 .job-info--box{

@@ -33,7 +33,6 @@ function handleSubmit(e) {
 }
 
 
-
 useEffect( function () { 
     setIsLoading(true);
     setError("")
@@ -95,7 +94,8 @@ const totalPosts = search.length;
         <Pagination 
             totalPosts={totalPosts} 
             postsPerPage={postsPerPage}
-            setCurrentPage={setCurrentPage}    
+            setCurrentPage={setCurrentPage} 
+            currentPage={currentPage}   
          />
         <Footer />
 
