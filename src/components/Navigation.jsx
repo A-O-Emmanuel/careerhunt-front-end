@@ -5,6 +5,7 @@ import FoundJobs from "./FoundJobs";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
 import Header from "./Header";
+import Pagination from "./Pagination";
 import Footer from "./Footer";
 
 
@@ -19,15 +20,18 @@ const [search, setSearch] = useState([])
 const [isLoading, setIsLoading] = useState(false);
 const [error, setError] = useState("");
 
+const [currentPage, setCurrentPage] = useState(1);
+const [postsPerPage, setPostsPerPage] = useState(5);
+
+
 function handleSubmit(e) {
     const enteredJobTitle = jobTitle.current.value;
     const enteredCityTitle = cityTitle.current.value;
     setJobSearch(enteredJobTitle)
     setCitySearch(enteredCityTitle)
-    //console.log(jobSearch)
-   //console.log(citySearch)
    e.preventDefault()
 }
+
 
 
 useEffect( function () { 
@@ -42,12 +46,16 @@ useEffect( function () {
         console.log(data.results)
         if (data.results.length === 0) throw new Error("Please enter a valid search query")
         setSearch(data.results)
-       console.log(data)
      })
      .catch(err => setError(err.message))
      .finally(() => setIsLoading(false))
 }, [jobSearch, citySearch])
 
+/* pagination logic*/
+const lastPostIndex = currentPage * postsPerPage;
+const firstPostIndex = lastPostIndex - postsPerPage;
+const currentPosts = search.slice(firstPostIndex, lastPostIndex)
+const totalPosts = search.length;
 
      return <>
         <Header />
@@ -74,7 +82,7 @@ useEffect( function () {
         </div>
 
         {isLoading && <Loader /> }
-        {!isLoading && !error && search.map((jobs) => {
+        {!isLoading && !error && currentPosts?.map((jobs) => {
             return <FoundJobs 
                         key={jobs.id} 
                         jobs={jobs}
@@ -82,8 +90,16 @@ useEffect( function () {
                     
         })}
 
-        {error && <ErrorMessage message={error} />}   
+        {error && <ErrorMessage message={error} />}
+
+        <Pagination 
+            totalPosts={totalPosts} 
+            postsPerPage={postsPerPage}
+            setCurrentPage={setCurrentPage}    
+         />
         <Footer />
+
+
     </>
 }
 
