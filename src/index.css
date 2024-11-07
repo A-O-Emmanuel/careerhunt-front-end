@@ -216,23 +216,28 @@ body {
     color: #fff;
 }
 
-
-.job-info--box{
-    border-color: #0F52BA;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    border-radius: 20px;
+.jobs__container {
+    display: flex;
+    flex-direction: column;
     border-style: solid;
-}
-
-
-
- .job-info--description {
-    text-align: justify;
+    border-color: lightgray;
     border-radius: 20px;
+    border-width: medium;
+    margin-bottom: 20px;
+    margin-left: 210px;
+    margin-right: 210px;
+    padding: 30px;
 }
 
+.jobs__container:hover {
+    border-color: #0F52BA;
+    transition: display 2s ease-out;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.jobs__container--save-job {
+    border-color: #0F52BA;
+}
 
 
 .hide-content {
