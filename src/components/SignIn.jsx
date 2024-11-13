@@ -35,7 +35,7 @@ export async function action({request}) {
         password: data.get('password')
     }
 
-    const response = await fetch('http://localhost:3000/signin', {
+    const response = await fetch('http://localhost:4000/signin', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -44,5 +44,8 @@ export async function action({request}) {
     });
 
     const res = await response.json();
+    const token = res.token
+
+    localStorage.setItem('token', token)
     return redirect('/')
 }
