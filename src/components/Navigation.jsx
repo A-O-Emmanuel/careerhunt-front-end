@@ -8,7 +8,6 @@ import Header from "./Header";
 import Pagination from "./Pagination";
 import Footer from "./Footer";
 
-
 function Navigation () {
 
 const jobTitle = useRef();
@@ -31,7 +30,6 @@ function handleSubmit(e) {
     setCitySearch(enteredCityTitle)
    e.preventDefault()
 }
-
 
 
 useEffect( function () { 

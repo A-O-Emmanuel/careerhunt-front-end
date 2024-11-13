@@ -148,6 +148,15 @@ body {
     box-shadow: 5px 5px 10px lightgray;
 }
 
+.register__form--firstname,
+.register__form--lastname {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-width: thin;
+}
+
 .register__form--email {
     height: 40px;
     width: 400px;

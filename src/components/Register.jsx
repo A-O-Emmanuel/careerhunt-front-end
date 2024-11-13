@@ -10,6 +10,14 @@ function Register() {
         <Header />
         <div className="register">
             <Form method='post' className="register__form">
+                <label htmlFor="firstname">Firstname</label>
+                <br />
+                <input type="text" name="firstname" required className="register__form--firstname" />
+                <br />
+                <label htmlFor="lastname">Lastname</label>
+                <br />
+                <input type="text" name="lastname" require className="register__form--lastname" />
+                <br />
                 <label htmlFor="email" >Email</label>
                 <br />
                 <input type="email" name="email" required className="register__form--email" />
