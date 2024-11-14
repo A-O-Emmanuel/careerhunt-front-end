@@ -27,6 +27,14 @@ body {
 
 }
 
+.nav__item--logout {
+    margin-left: 40px;
+    font-size: 18px;
+    border: none;   
+}
+
+
+
 .nav__item--register {
     margin-left: 40px;
     font-size: 18px;

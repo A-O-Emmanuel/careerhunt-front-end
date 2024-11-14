@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Form, NavLink } from "react-router-dom";
 
 function Header() {
     return <>
@@ -21,6 +21,11 @@ function Header() {
             </li>
             <li className="nav-item nav__item--register">
                 <NavLink to='/register' className="nav-link">Register</NavLink>
+            </li>
+            <li>
+                <Form action='/logout' method='post'>
+                    <button className="nav__item--logout">Logout</button>
+                </Form>
             </li>
       </ul>
     </div>
