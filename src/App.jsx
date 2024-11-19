@@ -16,6 +16,7 @@ const router = createBrowserRouter([
   {path: '/disclaimers', element: <Disclaimers />},
   {path: '/logout', action: LogoutAction}
 
+
 ])
 
 function App() {

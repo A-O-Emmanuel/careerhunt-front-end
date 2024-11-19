@@ -29,8 +29,11 @@ body {
 
 .nav__item--logout {
     margin-left: 40px;
+    margin-top: 7px;
     font-size: 18px;
-    border: none;   
+    border: none;
+    background-color: inherit;
+    color: inherit;   
 }
 
 

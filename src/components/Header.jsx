@@ -1,6 +1,11 @@
-import { Form, NavLink } from "react-router-dom";
+import {Form,  NavLink } from "react-router-dom";
+import authToken from "../util/auth";
+
 
 function Header() {
+
+const token = authToken();
+
     return <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
         <div className="container-fluid">
@@ -16,17 +21,27 @@ function Header() {
             <li className="nav-item nav__item--about">
                 <NavLink to='/about' className="nav-link">About</NavLink>
             </li>
-            <li className="nav-item nav__item--signin">
+            {!token &&
+                <li className="nav-item nav__item--signin">
                 <NavLink to='/signin' className="nav-link">Signin</NavLink>
-            </li>
-            <li className="nav-item nav__item--register">
+                </li>
+            }
+            
+            {!token &&
+                <li className="nav-item nav__item--register">
                 <NavLink to='/register' className="nav-link">Register</NavLink>
-            </li>
+                </li>
+            }
+           
+            {token &&
             <li>
-                <Form action='/logout' method='post'>
-                    <button className="nav__item--logout">Logout</button>
+                 <Form action='/logout' method='post'>
+                    <button className="nav-item nav__item--logout" >Logout</button>
                 </Form>
             </li>
+           
+            }
+            
       </ul>
     </div>
   </div>

@@ -1,12 +1,20 @@
+import { useState } from "react";
 import business_center from "../assets/business_center.svg";
 import payments from "../assets/payments.svg"
 import location from "../assets/location2.svg"
 
+
 export default function FoundJobs({jobs}) {
+const [jobId, setJobId] = useState('');
+
+function handleId() {
+    setJobId(jobs.id)
+}
+console.log(jobId)
  
      return (
         <>
-                <div className="jobs__container">
+                <div className="jobs__container" onClick={handleId}>
                     <h4>{jobs.title}</h4>
                     <img src="" alt="" />
                     <p className="job__container--company-name"><img src={business_center} />  {jobs.company.display_name}</p> 
@@ -15,7 +23,7 @@ export default function FoundJobs({jobs}) {
                     <p className="job__containter--job-description">{jobs.description}</p>
                     <p className="job__container--date-created">posted: {jobs.created}</p>
                 </div>
-              
+            <Job singleJob={jobId} />   
         </>
     )
 }
