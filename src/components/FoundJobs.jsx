@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SingleJob from "./SingleJob"
 import business_center from "../assets/business_center.svg";
 import payments from "../assets/payments.svg"
 import location from "../assets/location2.svg"
@@ -23,7 +24,7 @@ console.log(jobId)
                     <p className="job__containter--job-description">{jobs.description}</p>
                     <p className="job__container--date-created">posted: {jobs.created}</p>
                 </div>
-            <Job singleJob={jobId} />   
+            <SingleJob singleJob={jobId} />   
         </>
     )
 }
