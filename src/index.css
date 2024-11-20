@@ -109,6 +109,9 @@ body {
     width: 70px;
 }
 
+.error-message {
+    text-align: center;
+}
 .signin {
     display: flex;
     justify-content: center;
