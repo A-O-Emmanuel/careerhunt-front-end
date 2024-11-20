@@ -104,6 +104,11 @@ body {
 
 }
 
+.loader {
+    height: 70px;
+    width: 70px;
+}
+
 .signin {
     display: flex;
     justify-content: center;
