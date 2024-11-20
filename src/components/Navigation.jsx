@@ -91,12 +91,13 @@ const totalPosts = search.length;
 
         {error && <ErrorMessage message={error} />}
 
-        <Pagination 
+        {!isLoading && !error && <Pagination 
             totalPosts={totalPosts} 
             postsPerPage={postsPerPage}
             setCurrentPage={setCurrentPage} 
             currentPage={currentPage}   
-         />
+         />}
+        
         <Footer />
 
 
