@@ -259,15 +259,60 @@ body {
     border-color: #0F52BA;
 }
 
+.single-job__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+    
 
-.hide-content {
-    display: none;
-    transition: display 2s ease-out;
+.single-job__container--content {
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 20px;
+    margin-left: 210px;
+    margin-right: 210px;
 }
 
+.single-job__container--close {
+    border-style: solid;
+    border-width: thin;
+    float: right;
+    cursor: pointer;
 
-.show-content {
-   display: block;
+}
+
+.single-job__container--apply {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #0F52BA;
+    color:#fff;
+    border-color: #0F52BA;
+}
+
+.single-job__container--save-job {
+    margin-left: 15px;
+    width: 150px;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    background-color: antiquewhite;
+    color:#0F52BA;
+    border-color: antiquewhite;
+    
+}
+.hidden {
+    display: none;
 }
 
 .footer__items {

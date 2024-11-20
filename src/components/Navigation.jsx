@@ -31,10 +31,12 @@ function handleSubmit(e) {
    e.preventDefault()
 }
 
+
+
 useEffect( function () { 
     setIsLoading(true);
     setError("")
-    fetch (`http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${app_id}&app_key=${app_key}&results_per_page=20&what=${jobSearch} &where=${citySearch}&content-type=application/json`)
+    fetch(`http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${app_id}&app_key=${app_key}&results_per_page=20&what=${jobSearch}&where=${citySearch}&content-type=application/json`)
      .then((res) => {
         if(!res.ok) throw new Error()
         return res.json()

@@ -6,16 +6,30 @@ import location from "../assets/location2.svg"
 
 
 export default function FoundJobs({jobs}) {
-const [jobId, setJobId] = useState('');
+const [jobtitle, setJobTitle] = useState('');
+const [company, setCompany] = useState('');
+const [jobLocation, setJobLocation] = useState('');
+const [salaryMax, setSalaryMax] = useState('');
+const [salaryMin, setSalaryMin] = useState('');
+const [description, setDescription] = useState('');
+const [contract, setContract] = useState('');
+const [applyLink, setApplyLink] = useState('');
 
-function handleId() {
-    setJobId(jobs.id)
+
+function handleSingleJob() {
+    setJobTitle(jobs.title)
+    setCompany(jobs.company.display_name)
+    setJobLocation(jobs.location.display_name)
+    setSalaryMax(jobs.salary_max)
+    setSalaryMin(jobs.salary_min)
+    setDescription(jobs.description)
+    setContract(jobs.contract)
+    setApplyLink(jobs.redirect_url)
 }
-console.log(jobId)
  
      return (
         <>
-                <div className="jobs__container" onClick={handleId}>
+                <div className="jobs__container" onClick={handleSingleJob}>
                     <h4>{jobs.title}</h4>
                     <img src="" alt="" />
                     <p className="job__container--company-name"><img src={business_center} />  {jobs.company.display_name}</p> 
@@ -24,7 +38,17 @@ console.log(jobId)
                     <p className="job__containter--job-description">{jobs.description}</p>
                     <p className="job__container--date-created">posted: {jobs.created}</p>
                 </div>
-            <SingleJob singleJob={jobId} />   
+            <SingleJob 
+                jobTitle={jobtitle}
+                company={company}
+                jobLocation={jobLocation}
+                salaryMax={salaryMax}
+                salaryMin={salaryMin}
+                description={description}
+                contract={contract}
+                applyLink={applyLink}
+                setJobTitle={setJobTitle}
+            />   
         </>
     )
 }
