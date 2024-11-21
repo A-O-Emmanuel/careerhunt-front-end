@@ -107,10 +107,12 @@ body {
 .loader {
     height: 70px;
     width: 70px;
+    margin-bottom: 70px;
 }
 
 .error-message {
     text-align: center;
+    margin-bottom: 70px;
 }
 .signin {
     display: flex;
