@@ -340,3 +340,19 @@ body {
     align-self: center;
 }
 
+@media screen and (max-width: 991px ) {
+    .jobs__container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .single-job__container--content {
+        padding: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+       
+    }
+
+  
+
+}
