@@ -31,6 +31,8 @@ function handleSubmit(e) {
    e.preventDefault()
 }
 
+
+
 useEffect( function () { 
     setIsLoading(true);
     setError("")
@@ -57,7 +59,7 @@ const totalPosts = search.length;
      return <>
         <Header />
         <div className="div form-container">
-            <form className="form-containter__form"  onSubmit={handleSubmit}> 
+            <form className="form-container__form"  onSubmit={handleSubmit}> 
                         <input 
                         className="form-container__jobtitle"
                         type="text" 

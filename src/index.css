@@ -52,7 +52,7 @@ body {
     margin-bottom: 70px;
 }
 
-.form-containter__form{
+.form-container__form{
     box-shadow: 5px 5px 10px lightgray;
     border-radius: 10px;
     border: none;
@@ -354,7 +354,23 @@ body {
         margin-right: 10px;
        
     }
+}
 
-  
+@media screen and (max-width: 920px ) {
+    .form-container__form {
+        box-shadow: none;
+    }
+
+    .form-container__jobtitle, 
+    .form-containter__location, 
+    .form-container__search-button {
+        display: block;
+        width: 90vw;
+        height: 50px;
+        border-radius: 20px;
+        border-style: solid;
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px lightgray;
+    }
 
 }
