@@ -75,10 +75,11 @@ const totalPosts = search.length;
                         ref={cityTitle}
                         placeholder="City or Postcode"
                         />
-                        <button className="form-container__search-button">Find jobs</button>   
-                       
+                        <button className="form-container__search-button">Find jobs</button>                          
             </form>
         </div>
+            {search && jobSearch && citySearch && !error && !isLoading && <h5 className="available-jobs-text">{search.length} {jobSearch} jobs in {citySearch}.</h5>}
+            {search && !jobSearch && !citySearch && !error && !isLoading && <h5 className="available-jobs-text">{search.length} jobs available.</h5>}
 
         {isLoading && <Loader /> }
         {!isLoading && !error && currentPosts?.map((jobs) => {
