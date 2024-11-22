@@ -387,7 +387,16 @@ body {
 @media screen and (max-width: 403px) {
     .single-job__container--save-job {
         margin-top: 10px;
-        margin-left: 0px;
+        margin-left: 5px;
         width: 146px;
     }   
+}
+
+
+@media screen and (max-width: 390px) {
+    .single-job__container--save-job {
+        margin-top: 10px;
+        margin-left: 0px;
+        width: 146px;
+    }
 }
