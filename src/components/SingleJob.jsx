@@ -1,9 +1,10 @@
-import favorite from '../assets/favorite.svg';
+
 import close from '../assets/close.svg';
 import business_center from '../assets/business_center.svg';
 import location from '../assets/location2.svg';
 import payments from '../assets/payments.svg';
 import schedule from '../assets/schedule.svg';
+import SaveJob from './SaveJob';
 
 function SingleJob({ jobTitle,company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
 
@@ -21,7 +22,19 @@ function handleJobTitle() {
         <p><img src={payments} />  Salary: Min - &pound;{salaryMin ? salaryMin : "no min salary provided"} - Max - &pound;{salaryMax ? salaryMax : "no max salary provided"} per annum</p>  
         <p className='single-job__container--contract-length'><img src={schedule} alt="" />  Contract Length: {contract ? contract : 'Contract length is not provided for this job'}</p>
         <a href={applyLink}>{applyLink ? <button className='single-job__container--apply'>Apply for this Job</button>: "Apply link not provided"}</a> 
-        <button className='single-job__container--save-job'><img src={favorite} alt="" />  Save Job</button>
+        
+        <SaveJob
+             jobTitle={jobTitle}
+             company={company}
+             jobLocation={jobLocation}
+             salaryMax={salaryMax}
+             salaryMin={salaryMin}
+             description={description}
+             contract={contract}
+             applyLink={applyLink}
+             setJobTitle={setJobTitle}
+        />
+
         <hr />
         <h6>Job Description</h6>
         <p>{description}</p>
