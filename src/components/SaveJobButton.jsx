@@ -16,7 +16,6 @@ function handleSave() {
     contract, 
     applyLink, 
     setJobTitle});
- console.log(saveJob)
 } 
 
     return (

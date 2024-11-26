@@ -1,7 +1,6 @@
 import {Form,  NavLink } from "react-router-dom";
 import authToken from "../util/auth";
 
-
 function Header() {
 
 const token = authToken();
@@ -38,9 +37,15 @@ const token = authToken();
                  <Form action='/logout' method='post'>
                     <button className="nav-item nav__item--logout" >Logout</button>
                 </Form>
-            </li>
+            </li> }
            
-            }
+           {token &&
+            <li className="nav-item nav__item--savedjobs">
+                <NavLink to='/savedjobs' className="nav-link">
+                    Saved Jobs
+                </NavLink>
+            </li>
+           }
             
       </ul>
     </div>
