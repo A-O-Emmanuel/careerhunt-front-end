@@ -4,7 +4,7 @@ import business_center from '../assets/business_center.svg';
 import location from '../assets/location2.svg';
 import payments from '../assets/payments.svg';
 import schedule from '../assets/schedule.svg';
-import SaveJob from './SaveJob';
+import SaveJobButton from './SaveJobButton';
 
 function SingleJob({ jobTitle,company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
 
@@ -23,7 +23,7 @@ function handleJobTitle() {
         <p className='single-job__container--contract-length'><img src={schedule} alt="" />  Contract Length: {contract ? contract : 'Contract length is not provided for this job'}</p>
         <a href={applyLink}>{applyLink ? <button className='single-job__container--apply'>Apply for this Job</button>: "Apply link not provided"}</a> 
         
-        <SaveJob
+        <SaveJobButton
              jobTitle={jobTitle}
              company={company}
              jobLocation={jobLocation}
