@@ -1,9 +1,11 @@
 import favorite from '../assets/favorite.svg';
-import {useState, useEffect} from 'react';
+import {useState, useEffect,} from 'react';
 
 
 function SaveJobButton({jobTitle, company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
 const [saveJob, setSaveJob] = useState({});
+
+
 
 function handleSave() {
  setSaveJob({
@@ -33,10 +35,11 @@ useEffect(function() {
             applyLink: saveJob.applyLink,
         }
         
-        const response = await fetch('http://localhost:4000/savejob', {
+       try {
+         const response = await fetch('http://localhost:4000/savejob', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
             },
             body: JSON.stringify(jobInfo)
     
@@ -44,6 +47,11 @@ useEffect(function() {
     
         const res = await response.json();
         console.log(res)
+      
+       } catch(err) {
+        console.log(err)
+       }
+       
     }
     saveJobs()
 }, [saveJob])
