@@ -1,11 +1,12 @@
 import favorite from '../assets/favorite.svg';
 import {useState, useEffect,} from 'react';
+import authToken from "../util/auth";
 
 
 function SaveJobButton({jobTitle, company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
 const [saveJob, setSaveJob] = useState({});
 
-
+const token = authToken()
 
 function handleSave() {
  setSaveJob({
@@ -23,7 +24,6 @@ function handleSave() {
 
 useEffect(function() {
     async function saveJobs() {
-
         const jobInfo = {
             jobTitle: saveJob.jobTitle,
             company: saveJob.compay,
@@ -40,6 +40,7 @@ useEffect(function() {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'x-auth-token': token
             },
             body: JSON.stringify(jobInfo)
     
