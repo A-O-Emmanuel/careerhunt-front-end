@@ -1,7 +1,12 @@
 import {Form,  NavLink } from "react-router-dom";
 import authToken from "../util/auth";
 
+import { useContext } from "react";
+import { TokenContext } from "../store/TokenContext";
+
 function Header() {
+
+const token2 = useContext(TokenContext);
 
 const token = authToken();
 

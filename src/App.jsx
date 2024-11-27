@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 
 function App() {
   return <>
-  <TokenContext.Provider>
+  <TokenContext.Provider value={{token: ''}}>
     <RouterProvider router={router} />
     </TokenContext.Provider>
   </>
