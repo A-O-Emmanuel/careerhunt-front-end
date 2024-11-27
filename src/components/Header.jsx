@@ -1,13 +1,10 @@
-import {Form,  NavLink } from "react-router-dom";
-import authToken from "../util/auth";
+import {Form, NavLink, useRouteLoaderData } from "react-router-dom";
 
 
 function Header() {
+const token = useRouteLoaderData('root');
 
-
-
-
-const token = authToken();
+console.log(token)
 
     return <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
