@@ -8,6 +8,7 @@ import Disclaimers from './components/Disclaimers.jsx';
 import {action as LogoutAction} from './components/Logout.jsx';
 import SavedJobs from './components/SavedJobs.jsx';
 import Layout from './components/Layout.jsx';
+import {tokenLoader} from './util/auth.js'
 
 
 
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
   {
     path: '/', 
     element: <Layout />,
+    id: 'root',
+    loader: tokenLoader,
     children: [
       {path: '/', element: <Navigation />},
       {path: '/about', element: <About />},
