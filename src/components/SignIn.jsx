@@ -1,12 +1,11 @@
 import {Form, redirect} from "react-router-dom"
-import Header from "./Header";
-import Footer from "./Footer";
+
 
 function SignIn() {
 
     return (
         <>
-            <Header />
+           
             <div className="signin">
             <Form method='post' className="signin__form">
                 <label htmlFor="email" className="signin__form--email-label">Email</label> 
@@ -20,7 +19,6 @@ function SignIn() {
                 <button className="signin__form--button">Sign In</button>
             </Form>
             </div>
-            <Footer />
         </>
     )
 }

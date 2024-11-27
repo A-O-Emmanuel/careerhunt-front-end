@@ -1,13 +1,11 @@
 
 import { Form, redirect } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
 
 function Register() {
 
     return (
         <>
-        <Header />
+
         <div className="register">
             <Form method='post' className="register__form">
                 <label htmlFor="firstname">Firstname</label>
@@ -34,7 +32,7 @@ function Register() {
                 <button className="register__form--button">Register</button>
             </Form>
         </div>
-        <Footer />
+       
         </>
     )
 }

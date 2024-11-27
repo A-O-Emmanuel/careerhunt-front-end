@@ -4,9 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import FoundJobs from "./FoundJobs";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
-import Header from "./Header";
 import Pagination from "./Pagination";
-import Footer from "./Footer";
+
 
 function Navigation () {
 
@@ -31,8 +30,6 @@ function handleSubmit(e) {
    e.preventDefault()
 }
 
-const app_id = "a784e5ca";
-const app_key = "c5a2831f7118b6e6893229fba355ab6f";
 
 
 useEffect( function () { 
@@ -59,7 +56,6 @@ const currentPosts = search.slice(firstPostIndex, lastPostIndex)
 const totalPosts = search.length;
 
      return <>
-        <Header />
         <div className="div form-container">
             <form className="form-container__form"  onSubmit={handleSubmit}> 
                         <input 
@@ -100,8 +96,6 @@ const totalPosts = search.length;
             setCurrentPage={setCurrentPage} 
             currentPage={currentPage}   
          />}
-        
-        <Footer />
 
 
     </>
