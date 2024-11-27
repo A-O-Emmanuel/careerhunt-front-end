@@ -3,3 +3,5 @@ export default function authToken() {
     return token;
 }
 
+export const token = authToken();
+

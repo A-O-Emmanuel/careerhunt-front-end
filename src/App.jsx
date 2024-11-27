@@ -7,9 +7,11 @@ import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import Disclaimers from './components/Disclaimers.jsx';
 import {action as LogoutAction} from './components/Logout.jsx';
 import SavedJobs from './components/SavedJobs.jsx';
-import { TokenContext } from './store/TokenContext.jsx';
+
+
 
 const router = createBrowserRouter([
+
   {path: '/', element: <Navigation />},
   {path: '/about', element: <About />},
   {path: '/signin', element: <SignIn />, action: loginInfo},
@@ -32,11 +34,12 @@ const router = createBrowserRouter([
 ])
 
 
-function App() {
+
+
   return <>
-  <TokenContext.Provider value={{token: ''}}>
+  
     <RouterProvider router={router} />
-    </TokenContext.Provider>
+
   </>
    
 }
