@@ -26,17 +26,7 @@ const router = createBrowserRouter([
       {path: '/privacypolicies', element: <PrivacyPolicy />},
       {path: '/disclaimers', element: <Disclaimers />},
       {path: '/logout', action: LogoutAction},
-      {path: '/savedjobs', element: <SavedJobs />, loader: () => {
-        fetch(`http://localhost:4000/savedjobs`)
-        .then((res) => {
-           if(!res.ok) throw new Error()
-           return res.json()
-           })
-        .then((data) => {
-           if (data.length === 0) throw new Error("You don't have any saved Jobs")
-        })
-        .catch(err => setError(err.message))
-      } }
+      {path: '/savedjobs', element: <SavedJobs />}
     ]
   },
   

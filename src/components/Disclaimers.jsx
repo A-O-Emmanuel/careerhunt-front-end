@@ -1,11 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
 
 function Disclaimers() {
     return (
         <>
-            <Header />
-
             <div className="disclaimer">
             <h5>
                 Disclaimer
@@ -87,7 +83,6 @@ function Disclaimers() {
             </p>
 
             </div>
-            <Footer />
         </>
     )
 }

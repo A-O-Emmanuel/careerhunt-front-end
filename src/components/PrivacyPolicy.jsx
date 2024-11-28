@@ -1,11 +1,9 @@
-import Header from "./Header";
-import Footer from "./Footer";
+
 
 
 function PrivacyPolicy() {
     return (
         <>
-            <Header />
             <div className="privacy">
             <h5>
                 Privacy Policy
@@ -171,7 +169,6 @@ function PrivacyPolicy() {
                 </li>
             </ul>
             </div>
-            <Footer />
         </>
     )
 }

@@ -1,10 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
 
 function About() {
     return (
         <>
-        <Header />
         <div className="about">
         <h5>About careerHunt</h5>
         <p>Welcome to CareerHunt, your comprehensive platform for discovering career opportunities and advancing your professional journey. 
@@ -44,7 +41,6 @@ function About() {
             Start your journey with CareerHunt today and take the next step towards your career aspirations.
         </p>
         </div>
-        <Footer />
         </>
     )
 }

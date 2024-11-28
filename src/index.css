@@ -1,6 +1,6 @@
 
 body {
-    background-color: #fff;
+    background-color: #F8F8FF;
 }
 .nav {
     padding-top: 15px;
@@ -29,7 +29,6 @@ body {
 
 .nav__item--logout {
     margin-left: 40px;
-    margin-top: 7px;
     font-size: 18px;
     border: none;
     background-color: inherit;
@@ -41,6 +40,10 @@ body {
     font-size: 18px;
 }
 
+.nav__item--savedjobs {
+    margin-left: 40px;
+    font-size: 18px;
+}
 .form-container{
     display: flex;
     justify-content: center;
@@ -53,6 +56,7 @@ body {
     box-shadow: 5px 5px 10px lightgray;
     border-radius: 10px;
     border: none;
+    
 }
 
 .form-container__jobtitle {
@@ -65,6 +69,7 @@ body {
    border-bottom-left-radius: 10px;
    border-color: none;
    border-width: thin;
+   background-color: #fff;
 }
 
 .form-container__jobtitle:focus {
@@ -80,6 +85,7 @@ body {
     border-right: none;
     border-left: none;
     border-width: thin;
+    background-color: #fff;
 }
 
 
@@ -241,6 +247,7 @@ body {
     color: #000;
     border-color: #0F52BA;
     box-shadow: 5px 5px 10px lightgray;
+    background-color: #fff;
 }
 
 .pagination button.active {
@@ -259,6 +266,7 @@ body {
     margin-left: 210px;
     margin-right: 210px;
     padding: 30px;
+    background-color: #fff;
 }
 
 .jobs__container:hover {

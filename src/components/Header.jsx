@@ -34,9 +34,9 @@ console.log(token)
             }
            
             {token &&
-            <li>
+            <li className="nav-item nav__item--logout">
                  <Form action='/logout' method='post'>
-                    <button className="nav-item nav__item--logout" >Logout</button>
+                    <button className="nav-link " >Logout</button>
                 </Form>
             </li> }
            
