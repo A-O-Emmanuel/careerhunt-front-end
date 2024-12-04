@@ -7,7 +7,7 @@ const token = useRouteLoaderData('root');
 console.log(token)
 
     return <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
+    <nav className="navbar navbar-expand-lg  nav">
         <div className="container-fluid">
             <a className="navbar-brand nav__logo" href="#">careerHunt</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

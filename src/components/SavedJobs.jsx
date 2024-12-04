@@ -1,5 +1,36 @@
+import { useRouteLoaderData} from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function SavedJobs() {
+
+    const [savedJobs, setSavedJobs] = useState([]);
+
+    const token = useRouteLoaderData('root');
+
+    console.log(savedJobs)
+
+    useEffect(function() {
+        async function getsavedJobs() {
+           try {
+             const response = await fetch('http://localhost:4000/savedjobs', {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json',
+                    'x-auth-token': token
+                },
+            });
+        
+            const res = await response.json();
+            setSavedJobs(res)
+
+           } catch(err) {
+            console.log(err)
+           }
+           
+        }
+        getsavedJobs()
+    }, [])
+    
 
     return (
         <>
@@ -9,16 +40,3 @@ function SavedJobs() {
 }
 
 export default SavedJobs;
-
-export function saveJobsLoader() {
-        
-    fetch(`http://localhost:4000/savedjobs`)
-        .then((res) => {
-           if(!res.ok) throw new Error()
-           return res.json()
-           })
-        .then((data) => {
-           if (data.length === 0) throw new Error("You don't have any saved Jobs")
-        })
-        .catch(err => setError(err.message))
-}
