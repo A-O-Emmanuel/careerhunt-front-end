@@ -1,5 +1,11 @@
 import { useRouteLoaderData} from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import FetchedSavedJobs from './FetchedSavedJobs';
+
+
+
+
+
 
 function SavedJobs() {
 
@@ -7,7 +13,7 @@ function SavedJobs() {
 
     const token = useRouteLoaderData('root');
 
-    console.log(savedJobs)
+ 
 
     useEffect(function() {
         async function getsavedJobs() {
@@ -34,7 +40,25 @@ function SavedJobs() {
 
     return (
         <>
-            <h4>Saved Jobs</h4>
+        {
+            savedJobs.map((jobs) => {
+              return (
+               <FetchedSavedJobs
+                key={jobs._id}
+                jobTitle={jobs.jobTitle}
+                company={jobs.company}
+                jobLocation={jobs.jobLocation} 
+                salaryMax={jobs.salaryMax} 
+                salaryMin={jobs.salaryMin}
+                description={jobs.description}
+                contract={jobs.contract}
+                applyLink={jobs.applyLink}
+               />
+              )  
+              
+            })
+        }
+            
         </>
     )
 }
