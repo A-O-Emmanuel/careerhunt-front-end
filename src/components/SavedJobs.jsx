@@ -3,10 +3,6 @@ import { useState, useEffect } from 'react';
 import FetchedSavedJobs from './FetchedSavedJobs';
 
 
-
-
-
-
 function SavedJobs() {
 
     const [savedJobs, setSavedJobs] = useState([]);
@@ -45,6 +41,7 @@ function SavedJobs() {
               return (
                <FetchedSavedJobs
                 key={jobs._id}
+                id={jobs._id}
                 jobTitle={jobs.jobTitle}
                 company={jobs.company}
                 jobLocation={jobs.jobLocation} 
