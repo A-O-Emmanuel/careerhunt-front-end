@@ -1,4 +1,5 @@
 import {Form, NavLink, useRouteLoaderData } from "react-router-dom";
+import account  from "../assets/account.svg";
 
 
 function Header() {
@@ -48,12 +49,22 @@ console.log(token)
             </li>
            }
 
-           {token && 
-            <li className="nav-item nav__item--savedjobs">
-               <Form action='/deleteUser' method='post'>
-                    <button className="nav-link">Delete User</button>
-               </Form>
+           {token &&
+
+            <li className="nav-item dropdown nav__item--delete-account ">
+            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src={account} alt="" />
+            </a>
+            <ul className="dropdown-menu delete">
+                
+                    <Form action='/deleteUser' method='post' >
+                        <button className="nav-link">Delete Account</button>
+                    </Form>
+               
+               
+            </ul>
             </li>
+
            }
             
       </ul>

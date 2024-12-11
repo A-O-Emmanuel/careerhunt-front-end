@@ -47,10 +47,19 @@ body {
     margin-left: 40px;
     font-size: 18px;
 }
+
+.nav__item--delete-account {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.delete {
+  padding-left: 15px;
+}
 .form-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     padding-top: 70px;
     padding-bottom: 35px;
 }
