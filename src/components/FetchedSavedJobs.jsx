@@ -16,21 +16,24 @@ const isMounted = useRef(false);
 
 function handleDelete() {
     setDeleteJob(id)
-    console.log(deleteJob)
 }
 
 useEffect(function() {
     if (isMounted.current) {
     async function removeJob() {
+        const jobId = {
+            id: deleteJob
+        }
         
        try {
+
          const response = await fetch('http://localhost:4000/deletejob', {
-            method: 'POST',
+            method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
                 'x-auth-token': token
             },
-            body: JSON.stringify(deleteJob)
+            body: JSON.stringify(jobId)
     
         });
     

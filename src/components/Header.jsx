@@ -47,6 +47,14 @@ console.log(token)
                 </NavLink>
             </li>
            }
+
+           {token && 
+            <li className="nav-item nav__item--savedjobs">
+               <Form action='/deleteUser' method='post'>
+                    <button className="nav-link">Delete User</button>
+               </Form>
+            </li>
+           }
             
       </ul>
     </div>
