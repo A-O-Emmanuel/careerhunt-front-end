@@ -1,7 +1,8 @@
 
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useActionData  } from "react-router-dom";
 
 function Register() {
+    const data = useActionData();
 
     return (
         <>
@@ -29,6 +30,7 @@ function Register() {
                 <input type="password" name="confirm" required minLength={6} className="register__form--confirm" />
                 <br />
                 <br />
+                {data && <p>{data}</p>}
                 <button className="register__form--button">Register</button>
             </Form>
         </div>
@@ -58,8 +60,17 @@ export async function action({request}) {
         body: JSON.stringify(userInfo)
     });
 
-    const res = await response.json()
+    if (response.status === 400) {
+        return response;
+    }
 
-    console.log(res)
+    if (response.status === 422) {
+        return response;
+    }
+
+    if (response.status === 201) {
+        return response;
+    }
+    
     return redirect('/signin');
 }
