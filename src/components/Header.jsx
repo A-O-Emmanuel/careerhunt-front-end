@@ -12,7 +12,7 @@ console.log(token)
         <div className="container-fluid">
             <a className="navbar-brand nav__logo" href="#">careerHunt</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon "></span>
             </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,13 +34,6 @@ console.log(token)
                 </li>
             }
            
-            {token &&
-            <li className="nav-item nav__item--logout">
-                 <Form action='/logout' method='post'>
-                    <button className="nav-link " >Logout</button>
-                </Form>
-            </li> }
-           
            {token &&
             <li className="nav-item nav__item--savedjobs">
                 <NavLink to='/savedjobs' className="nav-link">
@@ -48,25 +41,29 @@ console.log(token)
                 </NavLink>
             </li>
            }
+           
+            {token &&
+            <li className="nav-item nav__item--logout">
+                 <Form action='/logout' method='post'>
+                    <button className="nav-link " >Logout</button>
+                </Form>
+            </li> }
 
-           {token &&
-
+            {token &&
             <li className="nav-item dropdown nav__item--delete-account ">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src={account} alt="" />
             </a>
-            <ul className="dropdown-menu delete">
-                
-                    <Form action='/deleteUser' method='post' >
-                        <button className="nav-link">Delete Account</button>
-                    </Form>
-               
-               
+            <ul className="dropdown-menu  delete">
+                <Form action='/deleteUser' method='post' >
+                    <button className="nav-link">Delete Account</button>
+                </Form>               
             </ul>
             </li>
-
            }
             
+
+
       </ul>
     </div>
   </div>

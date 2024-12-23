@@ -30,13 +30,6 @@ body {
 
 }
 
-.nav__item--logout {
-    margin-left: 40px;
-    font-size: 18px;
-    border: none;
-    background-color: inherit;
-    color: inherit;   
-}
 
 .nav__item--register {
     margin-left: 40px;
@@ -48,6 +41,8 @@ body {
     font-size: 18px;
 }
 
+
+
 .nav__item--delete-account {
     margin-left: 40px;
     font-size: 18px;
@@ -56,6 +51,16 @@ body {
 .delete {
   padding-left: 15px;
 }
+
+
+.nav__item--logout {
+    margin-left: 40px;
+    font-size: 18px;
+    border: none;
+    background-color: inherit;
+    color: inherit;   
+}
+
 .form-container{
     display: flex;
     justify-content: center;
@@ -378,6 +383,8 @@ body {
         margin-right: 10px;
        
     }
+
+ 
 }
 
 @media screen and (max-width: 920px ) {
@@ -421,4 +428,23 @@ body {
         margin-left: 0px;
         width: 146px;
     }
+}
+
+@media screen and (max-width: 515px) {
+
+    .signin__form, 
+    .register__form{
+      padding: 20px;
+    }
+    .signin__form--email,
+    .signin__form--password,
+    .register__form--firstname,
+    .register__form--lastname,
+    .register__form--email,
+    .register__form--password,
+    .register__form--confirm{
+        width: 250px;
+    }
+
+   
 }
