@@ -13,7 +13,7 @@ function PasswordReset() {
                 <input type="password" name="confirm" className="signin__form--password" />
                 <br />
                 <br />
-                <button className="signin__form--button">Reset</button>
+                <button className="signin__form--button">Reset password</button>
             </Form>
             </div>
         </>
@@ -21,3 +21,28 @@ function PasswordReset() {
 }
 
 export default PasswordReset;
+
+
+export async function action({request}) {
+    const data = await request.formData();
+
+    const loginInfo = {
+        newPassword: data.get('newpassword'),
+        confirm: data.get('confirm')
+
+    }
+
+    const response = await fetch('http://localhost:4000/forgotpassword', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(loginInfo)
+    });
+
+    if (response.status === 400) {
+        return response;
+    }
+
+    return redirect('/')
+}
