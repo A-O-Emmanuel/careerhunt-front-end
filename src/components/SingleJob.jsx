@@ -6,7 +6,7 @@ import payments from '../assets/payments.svg';
 import schedule from '../assets/schedule.svg';
 import SaveJobButton from './SaveJobButton';
 
-function SingleJob({ jobTitle,company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
+function SingleJob({ jobId, jobTitle,company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
 
 function handleJobTitle() {
     setJobTitle('')
@@ -24,6 +24,7 @@ function handleJobTitle() {
         <a href={applyLink}>{applyLink ? <button className='single-job__container--apply'>Apply for this Job</button>: "Apply link not provided"}</a> 
         
         <SaveJobButton
+            jobId={jobId}
              jobTitle={jobTitle}
              company={company}
              jobLocation={jobLocation}

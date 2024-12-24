@@ -14,6 +14,7 @@ const [salaryMin, setSalaryMin] = useState('');
 const [description, setDescription] = useState('');
 const [contract, setContract] = useState('');
 const [applyLink, setApplyLink] = useState('');
+const [jobId, setJobId] = useState('');
 
 
 function handleSingleJob() {
@@ -25,6 +26,7 @@ function handleSingleJob() {
     setDescription(jobs.description)
     setContract(jobs.contract)
     setApplyLink(jobs.redirect_url)
+    setJobId(jobs.id)
 }
  
      return (
@@ -48,6 +50,7 @@ function handleSingleJob() {
                 contract={contract}
                 applyLink={applyLink}
                 setJobTitle={setJobTitle}
+                jobId={jobId}
             />   
         </>
     )

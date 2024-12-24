@@ -2,7 +2,7 @@ import favorite from '../assets/favorite.svg';
 import {useState, useEffect, useRef} from 'react';
 import { useRouteLoaderData} from 'react-router-dom';
 
-function SaveJobButton({jobTitle, company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
+function SaveJobButton({jobId, jobTitle, company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
     
 const [saveJob, setSaveJob] = useState({});
 const [response, setResponse] = useState('');
@@ -14,6 +14,7 @@ const token = useRouteLoaderData('root')
 
 function handleSave() {
  setSaveJob({
+    jobId,
     jobTitle, 
     company, 
     jobLocation, 
@@ -37,6 +38,7 @@ function handleSave() {
         if (isMounted.current) {
         async function saveJobs() {
             const jobInfo = {
+                jobId: saveJob.jobId,
                 jobTitle: saveJob.jobTitle,
                 company: saveJob.compay,
                 jobLocation: saveJob.jobLocation,
