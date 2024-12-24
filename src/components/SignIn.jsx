@@ -1,4 +1,4 @@
-import {Form, redirect, useActionData} from "react-router-dom"
+import {Form, redirect, NavLink, useActionData} from "react-router-dom"
 
 
 function SignIn() {
@@ -18,6 +18,7 @@ const data = useActionData();
                 <br />
                 {data && data.id === '2' && <p>{data.message} </p>}
                 <br />
+                <NavLink to='/forgotpassword'>Forgot password?</NavLink> 
                 <button className="signin__form--button">Sign In</button>
             </Form>
             </div>
