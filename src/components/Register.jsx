@@ -1,9 +1,10 @@
 
-import { Form, redirect, useActionData  } from "react-router-dom";
+import { Form, redirect, useActionData, NavLink} from "react-router-dom";
 
 function Register() {
     const data = useActionData();
 
+    console.log(data)
     return (
         <>
 
@@ -30,7 +31,9 @@ function Register() {
                 <input type="password" name="confirm" required minLength={6} className="register__form--confirm" />
                 <br />
                 <br />
-                {data && <p>{data}</p>}
+                {data && data.id === '3' && <p>{data.message}<NavLink to='/signin' className="nav-link signin__in-register">Signin.</NavLink></p>}
+                {data && data.id === '2' && <p>{data.message} </p>}
+                {data && data.id === '1' && <p>{data.message}<NavLink to='/signin' className="nav-link signin__in-register">Signin.</NavLink></p>}
                 <button className="register__form--button">Register</button>
             </Form>
         </div>
