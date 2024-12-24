@@ -10,6 +10,7 @@ import {action as LogoutAction} from './components/Logout.jsx';
 import SavedJobs from './components/SavedJobs.jsx';
 import Layout from './components/Layout.jsx';
 import {tokenLoader} from './util/auth.js'
+import PasswordReset from './components/PasswordReset.jsx';
 
 
 
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       {path: '/privacypolicies', element: <PrivacyPolicy />},
       {path: '/disclaimers', element: <Disclaimers />},
       {path: '/logout', action: LogoutAction},
-      {path: '/savedjobs', element: <SavedJobs />}
+      {path: '/savedjobs', element: <SavedJobs />},
+      {path: '/forgotpassword', element: <PasswordReset />}
     ]
   },
   
