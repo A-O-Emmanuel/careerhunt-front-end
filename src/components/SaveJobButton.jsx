@@ -5,8 +5,11 @@ import { useRouteLoaderData} from 'react-router-dom';
 function SaveJobButton({jobTitle, company,jobLocation,salaryMax,salaryMin,description,contract,applyLink, setJobTitle}) {
     
 const [saveJob, setSaveJob] = useState({});
+const [response, setResponse] = useState('');
+const [showResponse, setShowResponse] = useState('');
 const isMounted = useRef(false);
 
+console.log(response)
 const token = useRouteLoaderData('root')
 
 function handleSave() {
@@ -20,6 +23,12 @@ function handleSave() {
     contract, 
     applyLink, 
     setJobTitle});
+
+    setShowResponse(response);
+
+    setTimeout(()=> {
+        setShowResponse('')
+    }, 8000)
 }
 
 
@@ -50,7 +59,7 @@ function handleSave() {
             });
         
             const res = await response.json();
-            console.log(res)
+            setResponse(res)
           
            } catch(err) {
             console.log(err)
@@ -67,6 +76,7 @@ function handleSave() {
     return (
         <>        
           <button onClick={handleSave} className='single-job__container--save-job'><img src={favorite} alt="" />  Save Job</button>
+          <p>{showResponse}</p>
         </>
     )
 }

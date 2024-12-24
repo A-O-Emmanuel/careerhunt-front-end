@@ -14,7 +14,7 @@ const data = useActionData();
                 <br />
                 {data && data.id === '1' && <p>{data.message} </p>}
                 <label htmlFor="password" className="signin__form--password-label">Password</label> <br />
-                <input type="password" name="password" required minLength={6} className="signin__form--password" />
+                <input type="password" name="password" className="signin__form--password" />
                 <br />
                 {data && data.id === '2' && <p>{data.message} </p>}
                 <br />
