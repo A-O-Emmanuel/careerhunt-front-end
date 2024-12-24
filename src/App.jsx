@@ -11,6 +11,7 @@ import SavedJobs from './components/SavedJobs.jsx';
 import Layout from './components/Layout.jsx';
 import {tokenLoader} from './util/auth.js'
 import PasswordReset from './components/PasswordReset.jsx';
+import {action as PassworResetAction} from './components/PasswordReset.jsx';
 
 
 
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       {path: '/disclaimers', element: <Disclaimers />},
       {path: '/logout', action: LogoutAction},
       {path: '/savedjobs', element: <SavedJobs />},
-      {path: '/forgotpassword', element: <PasswordReset />}
+      {path: '/forgotpassword', element: <PasswordReset />, action: PassworResetAction}
     ]
   },
   

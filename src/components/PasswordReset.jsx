@@ -5,11 +5,17 @@ function PasswordReset() {
         <>
             <div className="signin">
             <Form method='post' className="signin__form">
+                
+                <label htmlFor="email" className="signin__form--email-label">Email</label> 
+                <br />
+                <input type="email" name="email" required className="signin__form--email" />
+                <br />
                 <label htmlFor="newpasswprd" className="signin__form--email-label">New Password</label> 
                 <br />
                 <input type="passwprd" name="newpassword" required className="signin__form--email" />
                 <br />
-                <label htmlFor="confirm" className="signin__form--password-label">Confirm</label> <br />
+                <label htmlFor="confirm" className="signin__form--password-label">Confirm</label> 
+                <br />
                 <input type="password" name="confirm" className="signin__form--password" />
                 <br />
                 <br />
@@ -27,6 +33,7 @@ export async function action({request}) {
     const data = await request.formData();
 
     const loginInfo = {
+        email:data.get('email'),
         newPassword: data.get('newpassword'),
         confirm: data.get('confirm')
 
