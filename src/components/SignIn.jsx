@@ -1,8 +1,8 @@
-import {Form, redirect} from "react-router-dom"
+import {Form, redirect, useActionData} from "react-router-dom"
 
 
 function SignIn() {
-
+const data = useActionData();
     return (
         <>
            
@@ -12,9 +12,11 @@ function SignIn() {
                 <br />
                 <input type="email" name="email" required className="signin__form--email" />
                 <br />
+                {data && data.id === '1' && <p>{data.message} </p>}
                 <label htmlFor="password" className="signin__form--password-label">Password</label> <br />
                 <input type="password" name="password" required minLength={6} className="signin__form--password" />
                 <br />
+                {data && data.id === '2' && <p>{data.message} </p>}
                 <br />
                 <button className="signin__form--button">Sign In</button>
             </Form>
@@ -40,6 +42,13 @@ export async function action({request}) {
         },
         body: JSON.stringify(loginInfo)
     });
+
+    if (response.status === 400) {
+        return response;
+    }
+    if (response.status === 422) {
+        return response;
+    }
 
     const res = await response.json();
     const token = res.token
