@@ -8,48 +8,38 @@ import { useState, useEffect, useRef} from 'react';
 
 
 function FetchedSavedJobs({id, jobTitle, company, jobLocation, salaryMax, salaryMin, description, contract, applyLink}) {
-const [deleteJob, setDeleteJob] = useState('')
+const [triggerFetch, setTriggerFetch] = useState(false);
 const token = useRouteLoaderData('root')
-const isMounted = useRef(false);
 
 
 
-function handleDelete() {
-    setDeleteJob(id)
-}
-
-useEffect(function() {
-    if (isMounted.current) {
-    async function removeJob() {
-        const jobId = {
-            id: deleteJob
-        }
-        
-       try {
-
-         const response = await fetch('http://localhost:4000/deletejob', {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json',
-                'x-auth-token': token
-            },
-            body: JSON.stringify(jobId)
-    
-        });
-    
-        const res = await response.json();
-        console.log(res)
-      
-       } catch(err) {
-        console.log(err)
-       }
-       
+async function handleDelete() {
+    const jobId = {
+        id
     }
-    removeJob()
-} else {
-    isMounted.current= true;
+
+    console.log(id)
+   try {
+     const response = await fetch('http://localhost:4000/deletejob', {
+        method: 'DELETE',
+        headers: {
+            'content-type': 'application/json',
+            'x-auth-token': token
+        },
+        body: JSON.stringify(jobId)
+
+    });
+    const res = await response.json();
+    if(!res.ok) throw new Error();
+    setTriggerFetch(!triggerFetch)
+    console.log(res)
+    
+    
+   } catch(err) {
+    console.log(err)
+   }
+   
 }
-}, [deleteJob])
 
 
     return (

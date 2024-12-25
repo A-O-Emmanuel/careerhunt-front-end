@@ -51,8 +51,7 @@ function SavedJobs() {
                 contract={jobs.contract}
                 applyLink={jobs.applyLink}
                />
-              )  
-              
+              )                
             })
         }
             
