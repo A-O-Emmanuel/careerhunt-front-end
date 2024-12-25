@@ -30,7 +30,6 @@ async function handleDelete() {
 
     });
     const res = await response.json();
-    if(!res.ok) throw new Error();
     setTriggerFetch(!triggerFetch)
     console.log(res)
     
@@ -40,8 +39,6 @@ async function handleDelete() {
    }
    
 }
-
-
     return (
         <>
              <div className="jobs__container">
