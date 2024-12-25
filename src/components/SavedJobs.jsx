@@ -6,6 +6,7 @@ import FetchedSavedJobs from './FetchedSavedJobs';
 function SavedJobs() {
 
     const [savedJobs, setSavedJobs] = useState([]);
+    const [triggerFetch, setTriggerFetch] = useState(0);
 
     const token = useRouteLoaderData('root');
 
@@ -28,10 +29,10 @@ function SavedJobs() {
            } catch(err) {
             console.log(err)
            }
-           
+
         }
         getsavedJobs()
-    }, [])
+    }, [triggerFetch])
     
 
     return (
@@ -50,6 +51,7 @@ function SavedJobs() {
                 description={jobs.description}
                 contract={jobs.contract}
                 applyLink={jobs.applyLink}
+                setTriggerFetch={setTriggerFetch}
                />
               )                
             })

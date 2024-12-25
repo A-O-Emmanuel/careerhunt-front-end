@@ -4,11 +4,8 @@ import payments from '../assets/payments.svg';
 import bin from '../assets/delete.svg'
 import { useRouteLoaderData} from 'react-router-dom';
 
-import { useState, useEffect, useRef} from 'react';
 
-
-function FetchedSavedJobs({id, jobTitle, company, jobLocation, salaryMax, salaryMin, description, contract, applyLink}) {
-const [triggerFetch, setTriggerFetch] = useState(false);
+function FetchedSavedJobs({id, jobTitle, company, jobLocation, salaryMax, salaryMin, description, contract, applyLink, setTriggerFetch}) {
 const token = useRouteLoaderData('root')
 
 
@@ -30,7 +27,7 @@ async function handleDelete() {
 
     });
     const res = await response.json();
-    setTriggerFetch(!triggerFetch)
+    setTriggerFetch(prev => prev + 1)
     console.log(res)
     
     
