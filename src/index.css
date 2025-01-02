@@ -318,6 +318,10 @@ body {
     border-radius: 20px;
     margin-left: 210px;
     margin-right: 210px;
+    overflow: auto;
+    max-height: 80vh;
+    border:solid;
+    border-color:#0F52BA;
 }
 
 .single-job__container--close {
@@ -410,8 +414,6 @@ body {
 @media screen and (max-width: 408px) {
     .single-job__container--save-job {
         margin-left: 5px;
-        overflow: auto;
-        max-height:80vh;
     }   
 }
 
