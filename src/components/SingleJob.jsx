@@ -38,7 +38,7 @@ function handleJobTitle() {
 
         <hr />
         <h6>Job Description</h6>
-        <p>{description}</p>
+        <p className="single-job__container--description">{description}</p>
         <p>{contract}</p>
         </div>
         </div>
