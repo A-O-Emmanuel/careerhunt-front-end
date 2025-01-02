@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   define: {
-    __APP_ENV__: process.env.VITE_VERCEL_ENV,
+    VITE_APP_ID:process.env.VITE_APP_ID,
+    VITE_APP_KEY:process.env.VITE_APP_KEY
   },
   test: {
     globals: true,
