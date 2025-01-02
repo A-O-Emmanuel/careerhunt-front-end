@@ -381,7 +381,8 @@ body {
         padding: 30px;
         margin-left: 10px;
         margin-right: 10px;
-       
+        overflow: auto;
+        max-height: 80vh;
     }
 
  
@@ -409,6 +410,8 @@ body {
 @media screen and (max-width: 408px) {
     .single-job__container--save-job {
         margin-left: 5px;
+        overflow: auto;
+        max-height:80vh;
     }   
 }
 
