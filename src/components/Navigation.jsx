@@ -34,9 +34,6 @@ function handleSubmit(e) {
 const app_id = import.meta.env.VITE_APP_ID;
 const app_key = import.meta.env.VITE_APP_KEY;
 
-console.log(app_id)
-console.log(app_key)
-
 useEffect( function () { 
     setIsLoading(true);
     setError("")
