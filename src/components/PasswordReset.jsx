@@ -45,7 +45,7 @@ export async function action({request}) {
 
     }
 
-    const response = await fetch('http://localhost:4000/forgotpassword', {
+    const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/forgotpassword`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json'

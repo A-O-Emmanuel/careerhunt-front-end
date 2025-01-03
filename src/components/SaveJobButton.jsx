@@ -24,7 +24,7 @@ async function handleSave() {
     setJobTitle};
 
     try {
-        const response = await fetch('http://localhost:4000/savejob', {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/savejob`, {
            method: 'POST',
            headers: {
                'content-type': 'application/json',

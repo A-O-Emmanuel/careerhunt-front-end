@@ -17,7 +17,7 @@ async function handleDelete() {
 
     console.log(id)
    try {
-     const response = await fetch('http://localhost:4000/deletejob', {
+     const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/deletejob`, {
         method: 'DELETE',
         headers: {
             'content-type': 'application/json',

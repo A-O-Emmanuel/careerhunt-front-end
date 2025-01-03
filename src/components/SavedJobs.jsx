@@ -15,7 +15,7 @@ function SavedJobs() {
     useEffect(function() {
         async function getsavedJobs() {
            try {
-             const response = await fetch('http://localhost:4000/savedjobs', {
+             const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/savedjobs`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

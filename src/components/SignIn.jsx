@@ -36,7 +36,7 @@ export async function action({request}) {
         password: data.get('password')
     }
 
-    const response = await fetch('http://localhost:4000/signin', {
+    const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/signin`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
